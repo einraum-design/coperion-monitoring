@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Monitoring App</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width = device-width, initial-scale = 1.0" />
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0">
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+
+	<!-- Javascript -->
+	<script src="cordova.js"></script>
+	<script src="js/lib/jquery-1.10.2.js"></script>
+	<script src="js/lib/jquery.mobile-1.4.5.min.js"></script>
+	<script src="js/lib/jquery-ui.js"></script>
+	<script src="js/lib/spacebrew-1.4.1.js"></script>
+	<script src="js/lib/visibility.min.js"></script>
+	<script src="js/lib/moment.js"></script>
+	<script src="js/lib/papaparse.js"></script>
+
+	<!-- Javascript for Content -->
+	<script src="js/dataAttr.js"></script>
+	<script src="js/navigationSwitch.js"></script>
+	<script src="js/imageZoom.js"></script>
+	<script src="js/showPoints.js"></script>
+	<script src="js/firstLinks.js"></script>
+	<script src="js/toggleSwitch.js"></script>
+	<script src="js/pageSwitch.js"></script>
+	<script src="js/table-data.js"></script>
+	<script src="js/raw-material-timeline.js"></script>
+
+	<!-- Spacebrew -->
+	<script src="js/spacebrew-client.js"></script>
+
+	<!-- HighCharts -->
+	<script src="js/lib/highcharts.js"></script>
+	<script src="js/charts/chartSensors.js"></script>
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="css/reset.css" rel="stylesheet" />
+	<link rel="stylesheet" href="css/jquery-ui.css">
+	<link rel="stylesheet" href="css/global.css" rel="stylesheet" />
+	<link rel="stylesheet" href="css/anlage.css" rel="stylesheet" />
+	<link rel="stylesheet" href="css/jquery-mobile.css">
+	<link rel="stylesheet" href="css/rohstoffe.css">
+</head>
+
+<body class="other">
+	<!-- Header Bereich -->
+	<div id="header">
+		<div class="left">
+			<div class="hiddenEvents">
+			<img src="img/coperion_logo.png" width="180">
+			</div>
+		</div>
+		<div class="navigation">
+			<div id="dd" class="change-app" tabindex="1">
+				<span>Material Tracking</span>
+				<ul class="dropdown">
+					<li><a href="index.html">Sensoring</a></li>
+					<li class="give"><a href="material-tracking.html">Material Tracking</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="right">
+			<img id="exitBtn" src="img/Exit_Icon.png">
+		</div>
+	</div>
+
+	<!-- Switch zwischen 2D und 3D -->
+	<div id="toggle-switch">
+		<fieldset>
+			<div data-role="fieldcontain">
+				<select id="select-based-flipswitch" data-role="flipswitch" data-mini="true">
+					<option value="3d"></option>
+					<option value="2d"></option>
+				</select>
+			</div>
+		</fieldset>
+	</div>
+<!-- Anlagen-Bild -->
+<div id="page">
+	<div class="anlagen-fade"></div>
+	<div id="anlagen-wrapper">
+
+		<div class="anlagen-bild">
+			<div id="anlage-ansicht-3d">
+				<img class="ansicht-3d" data-src="img/anlage/anlage-3d-01.png" />
+				<img class="ansicht-3d" data-src="img/anlage/anlage-3d-02.png" />
+				<img class="ansicht-3d" data-src="img/anlage/anlage-3d-03.png" />
+				<img class="ansicht-3d" data-src="img/anlage/anlage-3d-04.png" />
+				<img class="ansicht-3d" data-src="img/anlage/anlage-3d-05.png" />
+				<div class="fill-overlays">
+				</div>
+		 </div>
+
+			<div id="three-di-view">
+				<img class="three-di" data-src="img/part-5.png">
+				<img class="three-di" data-src="img/part-6.png">
+				<img class="three-di" data-src="img/part-7.png">
+				<img class="three-di" data-src="img/part-8.png">
+			</div>
+
+				<!-- Links Downstream -->
+				<div id="downstream-links">
+					<ul>
+
+					</ul>
+				</div>
+
+		</div>
+	</div>
+	<div id="first-row-rohstoffe">
+	<ul id="sensoren-hauptnavi">
+		<li id="full-link" class="full-link-spacebrew"><a href="#full"><span></span></a></li>
+		<li id="upstream-link" class="upstream-spacebrew"><a href="#upstream">Raw materials<span class="upstream-arrow"></span></a></li>
+		<li id="compounding-link" class="compounding-spacebrew"><a href="#compounding">Compounding<span class="compounding-arrow"></span></a></li>
+		<li id="downstream-link" class="downstream-spacebrew"><a href="#downstream">Downstream<span class="downstream-arrow"></span></a></li>
+	</ul>
+
+	<!-- Fullview -->
+	<div id="full">
+		<div class="sensoren-titel-in"><p>Houston <span class="blue">Line 1</span></p></div>
+
+		<div id="rohstoffe-recipe">
+			<span class="recipe-title">Recipe</span><br />
+			<span class="recipe-number">A</span> <!-- Nur A, B oder C -->
+
+			<div class="recipe-next">Next 2</div>
+			<!--<div class="recipe-scale"></div>-->
+		</div>
+
+		<!-- Rohstoff Übersicht 1-->
+		<div id="rohstoffe-fuellstaende-uebersicht">
+			<div class="rohstoffe-fuellstoff-01 rohstoffe-fuellstoff">
+				<div class="knob"></div>
+				<div class="rohstoffe-text">
+					<h3 class="rohstoffe-title">Polyethylene</h3>
+					<p class="rohstoffe-subtitle">PE</p>
+				</div>
+				<div class="rohstoffe-values">
+					<h3 class="rohstoffe-percent">67%</h3>
+					<p class="rohstoffe-value">1675 kg/h</p>
+				</div>
+			</div>
+		</div>
+		<!-- Ende Rohstoff Übersicht 1 -->
+
+		<!-- Rohstoff Übersicht 2-->
+		<div id="rohstoffe-fuellstaende-uebersicht">
+			<div class="rohstoffe-fuellstoff-02 rohstoffe-fuellstoff">
+				<div class="knob"></div>
+				<div class="rohstoffe-text">
+					<h3 class="rohstoffe-title">Additives</h3>
+					<p class="rohstoffe-subtitle">Additive (Powder) + Yellow (Pellets)</p>
+				</div>
+				<div class="rohstoffe-values">
+					<h3 class="rohstoffe-percent">67%</h3>
+					<p class="rohstoffe-value">1675 kg/h</p>
+				</div>
+			</div>
+		</div>
+		<!-- Ende Rohstoff Übersicht 2 -->
+		<!-- Rohstoff Übersicht 1-->
+		<div id="rohstoffe-fuellstaende-uebersicht">
+			<div class="rohstoffe-fuellstoff-03 rohstoffe-fuellstoff">
+				<div class="knob"></div>
+				<div class="rohstoffe-text">
+					<h3 class="rohstoffe-title">Filler</h3>
+					<p class="rohstoffe-subtitle">CaCO3</p>
+				</div>
+				<div class="rohstoffe-values">
+					<h3 class="rohstoffe-percent">67%</h3>
+					<p class="rohstoffe-value">1675 kg/h</p>
+				</div>
+			</div>
+		</div>
+		<!-- Ende Rohstoff Übersicht 1 -->
+
+	</div>
+
+	<!-- Upstream -->
+	<div id="upstream">
+		<div id="second-row-upstream-rohstoffe">
+			<ul class="second-row-navigation">
+				<li><a id="silo-1-link" href="#silo-1"><span>Silo 1</span></a></li>
+				<li><a id="silo-2-link" href="#silo-2"><span>Silo 2</span></a></li>
+				<li><a id="bigbag-link" href="#bigbag"><span>Big Bag</span></a></li>
+			</ul>
+
+			<div id="silo-1" data-component-id="0">
+				<div class="sensoren-titel-in"><p>Silo 1</p></div>
+				<table class="rohstoffe-fuellstaende">
+					<tr class="rohstoffe-title">
+						<td>Material</td>
+						<td>Quantity</td>
+						<td>Batch number</td>
+					</tr>
+				</table>
+			</div>
+
+			<div id="silo-2" data-component-id="2">
+				<div class="sensoren-titel-in"><p>Silo 2</p></div>
+				<table class="rohstoffe-fuellstaende">
+					<tr class="rohstoffe-title">
+						<td>Material</td>
+						<td>Quantity</td>
+						<td>Batch number</td>
+					</tr>
+				</table>
+			</div>
+
+			<div id="bigbag" data-component-id="14">
+				<div class="sensoren-titel-in"><p>Big Bag</p></div>
+				<table class="rohstoffe-fuellstaende">
+					<tr class="rohstoffe-title">
+						<td>Material</td>
+						<td>Quantity</td>
+						<td>Batch number</td>
+					</tr>
+				</table>
+			</div>
+
+		</div>
+	</div>
+
+	<!-- Compounding -->
+	<div id="compounding">
+		<div id="second-row-compounding-rohstoffe">
+			<ul class="second-row-navigation scroll">
+				<li><a id="tagessilo-1-link" href="#tagessilo-1"><span>Tagessilo 1</span></a></li>
+				<li><a id="dosierer-1-r-link" href="#dosierer-1-r"><span>Dosierer 1</span></a></li>
+				<li><a id="tagessilo-2-link" href="#tagessilo-2"><span>Tagessilo 2</span></a></li>
+				<li><a id="dosierer-2-r-link" href="#dosierer-2-r"><span>Dosierer 2</span></a></li>
+				<li><a id="hopper-link" href="#hopper"><span>Hopper</span></a></li>
+				<li><a id="dosierer-3-r-link" href="#dosierer-3-r"><span>Dosierer 3</span></a></li>
+				<li><a id="bigbag2-link" href="#bigbag2"><span>Big Bag 2</span></a></li>
+				<li><a id="dosierer-4-r-link" href="#dosierer-4-r"><span>Dosierer 4</span></a></li>
+				<li><a id="tagessilo-3-link" href="#tagessilo-3"><span>Tagessilo 3</span></a></li>
+				<li><a id="dosierer-5-r-link" href="#dosierer-5-r"><span>Dosierer-5</span></a></li>
+			</ul>
+
+			<div id="tagessilo-1" data-component-id="8">
+				<div class="sensoren-titel-in"><p>Tagessilo 1</p></div>
+				<table class="rohstoffe-fuellstaende">
+					<tr class="rohstoffe-title">
+						<td>Material</td>
+						<td>Quantity</td>
+						<td>Batch number</td>
+					</tr>
+				</table>
+			</div>
+
+			<div id="dosierer-1-r" data-component-id="9">
+				<div class="sensoren-titel-in"><p>Dosierer 1</p></div>
+				<table class="rohstoffe-fuellstaende">
+					<tr class="rohstoffe-title">
+						<td>Material</td>
+						<td>Quantity</td>
+						<td>Batch number</td>
+					</tr>
+				</table>
+			</div>
+
+			<div id="tagessilo-2" data-component-id="10">
+				<div class="sensoren-titel-in"><p>Tagessilo 2</p></div>
+				<table class="rohstoffe-fuellstaende">
+					<tr class="rohstoffe-title">
+						<td>Material</td>
+						<td>Quantity</td>
+						<td>Batch number</td>
+					</tr>
+				</table>
+			</div>
+
+			<div id="dosierer-2-r" data-component-id="11">
+				<div class="sensoren-titel-in"><p>Dosierer 2</p></div>
+				<table class="rohstoffe-fuellstaende">
+					<tr class="rohstoffe-title">
+						<td>Material</td>
+						<td>Quantity</td>
+						<td>Batch number</td>
+					</tr>
+				</table>
+			</div>
+
+			<div id="hopper" data-component-id="12">
+				<div class="sensoren-titel-in"><p>Hopper</p></div>
+				<table class="rohstoffe-fuellstaende">
+					<tr class="rohstoffe-title">
+						<td>Material</td>
+						<td>Quantity</td>
+						<td>Batch number</td>
+					</tr>
+				</table>
+			</div>
+
+			<div id="dosierer-3-r" data-component-id="13">
+				<div class="sensoren-titel-in"><p>Dosierer 3</p></div>
+				<table class="rohstoffe-fuellstaende">
+					<tr class="rohstoffe-title">
+						<td>Material</td>
+						<td>Quantity</td>
+						<td>Batch number</td>
+					</tr>
+				</table>
+			</div>
+
+			<div id="bigbag2" data-component-id="14">
+				<div class="sensoren-titel-in"><p>Big Bag 2</p></div>
+				<table class="rohstoffe-fuellstaende">
+					<tr class="rohstoffe-title">
+						<td>Material</td>
+						<td>Quantity</td>
+						<td>Batch number</td>
+					</tr>
+				</table>
+			</div>
+
+			<div id="dosierer-4-r" data-component-id="15">
+				<div class="sensoren-titel-in"><p>Dosierer 4</p></div>
+				<table class="rohstoffe-fuellstaende">
+					<tr class="rohstoffe-title">
+						<td>Material</td>
+						<td>Quantity</td>
+						<td>Batch number</td>
+					</tr>
+				</table>
+			</div>
+
+			<div id="tagessilo-3" data-component-id="16">
+				<div class="sensoren-titel-in"><p>Tagessilo 3</p></div>
+				<table class="rohstoffe-fuellstaende">
+					<tr class="rohstoffe-title">
+						<td>Material</td>
+						<td>Quantity</td>
+						<td>Batch number</td>
+					</tr>
+				</table>
+			</div>
+
+			<div id="dosierer-5-r" data-component-id="17">
+				<div class="sensoren-titel-in"><p>Dosierer 5</p></div>
+				<table class="rohstoffe-fuellstaende">
+					<tr class="rohstoffe-title">
+						<td>Material</td>
+						<td>Quantity</td>
+						<td>Batch number</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</div>
+
+	<!-- Downstream -->
+	<div id="downstream">
+		<div id="second-row-downstream-rohstoffe">
+			<ul class="second-row-navigation">
+				<li><a id="silo-3-link" href="#silo-3"><span>Silo 3</span></a></li>
+				<li><a id="wzk-r-link" href="#wzk-r"><span>WZK</span></a></li>
+				<li><a id="ibp-r-link" href="#ibp250-r"><span>IBP250</span></a></li>
+				<li><a id="silo-4-link" href="#silo-4"><span>Silo 4</span></a></li>
+				<li><a id="silo-5-link" href="#silo-5"><span>Silo 5</span></a></li>
+				<li><a id="silo-6-link" href="#silo-6"><span>Silo 6</span></a></li>
+				<li><a id="silo-7-link" href="#silo-7"><span>Silo 7</span></a></li>
+				<li><a id="silo-8-link" href="#silo-8"><span>Silo 8</span></a></li>
+				<!--
+				<li><a id="wet-link" href="#silo-9"><span>Silo 9</span></a></li>
+				<li><a id="wet-link" href="#silo-10"><span>Silo 10</span></a></li>
+				<li><a id="wet-link" href="#silo-11"><span>Silo 11</span></a></li>
+				<li><a id="wet-link" href="#silo-12"><span>Silo 12</span></a></li>
+				-->
+			</ul>
+
+			<div id="silo-3" data-component-id="28">
+				<div class="sensoren-titel-in"><p>Silo 3</p></div>
+				<h3>Recipe A</h3>
+				<table class="rohstoffe-fuellstaende">
+					<tr class="rohstoffe-title">
+						<td>Material</td>
+						<td>Quantity</td>
+						<td>Batch number</td>
+					</tr>
+				</table>
+			</div>
+
+			<div id="wzk-r" data-component-id="26">
+				<div class="sensoren-titel-in"><p>WZK</p></div>
+				<table class="rohstoffe-fuellstaende">
+					<tr class="rohstoffe-title">
+						<td>Material</td>
+						<td>Quantity</td>
+						<td>Batch number</td>
+					</tr>
+				</table>
+			</div>
+
+			<div id="ibp250-r" data-component-id="30">
+				<div class="sensoren-titel-in"><p>IBP 250</p></div>
+				<table class="rohstoffe-fuellstaende">
+					<tr class="rohstoffe-title">
+						<td>Material</td>
+						<td>Quantity</td>
+						<td>Batch number</td>
+					</tr>
+				</table>
+			</div>
+
+			<div id="silo-4" data-component-id="29">
+				<div class="sensoren-titel-in"><p>Silo 4</p></div>
+				<table class="rohstoffe-fuellstaende">
+					<tr class="rohstoffe-title">
+						<td>Material</td>
+						<td>Quantity</td>
+						<td>Batch number</td>
+					</tr>
+				</table>
+			</div>
+
+			<div id="silo-5" data-component-id="32">
+				<div class="sensoren-titel-in"><p>Silo 5</p></div>
+				<table class="rohstoffe-fuellstaende">
+					<tr class="rohstoffe-title">
+						<td>Material</td>
+						<td>Quantity</td>
+						<td>Batch number</td>
+					</tr>
+				</table>
+			</div>
+
+			<div id="silo-6" data-component-id="33">
+				<div class="sensoren-titel-in"><p>Silo 6</p></div>
+				<table class="rohstoffe-fuellstaende">
+					<tr class="rohstoffe-title">
+						<td>Material</td>
+						<td>Quantity</td>
+						<td>Batch number</td>
+					</tr>
+				</table>
+			</div>
+
+			<div id="silo-7" data-component-id="34">
+				<div class="sensoren-titel-in"><p>Silo 7</p></div>
+				<table class="rohstoffe-fuellstaende">
+					<tr class="rohstoffe-title">
+						<td>Material</td>
+						<td>Quantity</td>
+						<td>Batch number</td>
+					</tr>
+				</table>
+			</div>
+
+			<div id="silo-8" data-component-id="35">
+				<div class="sensoren-titel-in"><p>Silo 8</p></div>
+				<table class="rohstoffe-fuellstaende">
+					<tr class="rohstoffe-title">
+						<td>Material</td>
+						<td>Quantity</td>
+						<td>Batch number</td>
+					</tr>
+				</table>
+			</div>
+
+			<!--
+			<div id="silo-9">
+				<div class="sensoren-titel-in"><p>Silo 9</p></div>
+				<img class="rohstoff-dummy" src="img/rohstoffe-1.jpg" />
+			</div>
+
+			<div id="silo-10">
+				<div class="sensoren-titel-in"><p>Silo 10</p></div>
+				<img class="rohstoff-dummy" src="img/rohstoffe-1.jpg" />
+			</div>
+
+			<div id="silo-11">
+				<div class="sensoren-titel-in"><p>Silo 11</p></div>
+				<img class="rohstoff-dummy" src="img/rohstoffe-1.jpg" />
+			</div>
+
+			<div id="silo-12">
+				<div class="sensoren-titel-in"><p>Silo 12</p></div>
+				<img class="rohstoff-dummy" src="img/rohstoffe-1.jpg" />
+			</div>
+			-->
+		</div>
+	</div>
+
+</div>
+</div>
+
+<!-- Timeline -->
+<div id="raw-material-timeline">
+	<div id="timeline-timespan-options">
+	</div>
+	<button id="timeline-timespan-selected">
+	</button>
+</div>
+
+<script>
+	$("#first-row-rohstoffe").tabs();
+	$("#second-row-downstream-rohstoffe").tabs({show: 'fade', hide: 'fade', active: 0});
+	$("#second-row-upstream-rohstoffe").tabs({show: 'fade', hide: 'fade', active: 0});
+	$("#second-row-compounding-rohstoffe").tabs({show: 'fade', hide: 'fade', active: 0});
+
+	$(document).ready(function(){
+
+		$(".three-di").css('display','none');
+
+		$(".two-di").css({opacity:0});
+		$(".two-di").delay(200).each(function(i){$(this).delay(120*i).animate({"opacity":1},500);});
+
+		// exit app
+		$("#exitBtn").on("click", function(){
+			setTimeout( function () {
+				navigator.app.exitApp();
+			}, 150 );
+		})
+	
+	});
+</script>
+
+</body>
+</html>

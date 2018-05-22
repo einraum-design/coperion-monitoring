@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="de.designandsystems.monitoring" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+    <name>Monitoring</name>
+    <description>
+        Coperion Monitoring App
+    </description>
+    <author email="support@phonegap.com" href="http://phonegap.com">
+        PhoneGap Team
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+
+    <platform name="android">
+  <icon gap:platform="android" gap:qualifier="ldpi" src="www/android/mipmap-ldpi/ic_launcher.png"/>
+  <icon gap:platform="android" gap:qualifier="mdpi" src="www/android/mipmap-mdpi/ic_launcher.png"/>
+  <icon gap:platform="android" gap:qualifier="hdpi" src="www/android/mipmap-hdpi/ic_launcher.png"/>
+  <icon gap:platform="android" gap:qualifier="xhdpi" src="www/android/mipmap-xhdpi/ic_launcher.png"/>
+  <icon gap:platform="android" gap:qualifier="xxhdpi" src="www/android/mipmap4-xxhdpi/ic_launcher.png"/>
+  <icon gap:platform="android" gap:qualifier="xxxhdpi" src="www/android/mipmap2-xxxhdpi/ic_launcher.png"/>
+</platform>
+</widget>

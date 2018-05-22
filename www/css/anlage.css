@@ -1,0 +1,790 @@
+/* Das CSS für die Ansicht der Anlage */
+
+/* Anlagen in zwei Ansichten */
+
+#anlagen-wrapper{
+  height: 303px;
+  overflow: hidden;
+  margin-top: -15px;
+}
+
+/* Background-Fade */
+.anlagen-fade{
+	background-image: url("../img/gradient.png");
+	width: 100%;
+	height: 270px;
+	position: absolute;
+	top: 60px;
+	z-index: 9999;
+	pointer-events: none;
+}
+
+/* Anlagen Bild für die 2D Ansicht */
+.anlagen-bild{
+	/*background-image: url("../img/anlage-3d-2.png") no-repeat -9999px -9999px;
+	background-image: url("../img/anlage-2d.png");*/
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-color: none;
+  height: 259px;
+  padding-top: 30px;
+	margin-top: 0px;
+	overflow: hidden;
+	-webkit-transition: all .5s ease;
+	-webkit-transform: translateZ(0);
+}
+
+/* Anlage für die 3D Ansicht*/
+.other .anlagen-bild{
+	/*background-image: url("../img/anlage-3d-2.png");
+	background-image: url("../img/anlage-2d.png") no-repeat -9999px -9999px,*/
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-color: none;
+	height: 259px;
+	padding-top: 85px;
+	-webkit-transition: all .5s ease-in-out;
+	-webkit-transform: translateZ(0);
+	background-position-y: 40px;
+}
+
+
+.anlagen-bild > div {
+
+}
+
+.anlage-ansicht-3d{
+	position: fixed;
+	left: 0px;
+	top: 100px;
+}
+
+/*#anlage-ansicht-3d .ansicht-3d {
+	position: absolute;
+}
+
+.ansicht-3d-image-1 {
+	top: 0;
+	left: 0;
+}
+
+.ansicht-3d-image-2 {
+	top: 0;
+	left: 209px;
+}
+
+.ansicht-3d-image-3 {
+	top: 0;
+	left: 456px;
+}
+
+.ansicht-3d-image-4 {
+	top: 0;
+	left: 703px;
+}
+
+.ansicht-3d-image-5 {
+	top: 0;
+	left: 820px;
+}*/
+
+.fill-overlays {
+	position: absolute;
+	left: 0;
+	top: 0;
+	transition: all 0.6s ease;
+}
+
+body:not(.other) .fill-overlays {
+	opacity: 0;
+}
+
+.fill-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: none;
+	opacity: 0.8;
+	/* transform: rotate(-180deg); */
+}
+
+/* For debugging the material filling level shapes: */
+/*.fill-overlay
+{
+    background-color: red;
+    opacity: 0.3;
+}*/
+
+.fill-overlay rect {
+	transition: all 0.3s ease;
+}
+
+.fill-overlay rect {
+	transition: all 0.3s ease;
+}
+
+.fill-overlay rect:nth-child(2) {
+	transition-delay: 0.1s;
+}
+
+.fill-overlay rect:nth-child(3) {
+	transition-delay: 0.2s;
+
+}
+
+.fill-overlay[fill-overlay-id="0"] {
+	top: 98px;
+	left: 182px;
+	width: 24px;
+	height: 82px;
+	display: block;
+	-webkit-clip-path: polygon(0px 65px, 3px 65px,12px 82px,13px 82px,22px 65px,24px 65px,25px 0px,0px 0px);
+}
+
+.fill-overlay[fill-overlay-id="2"] {
+	display: block;
+	left: 247px;
+	top: 98px;
+	width: 24px;
+	height: 82px;
+	-webkit-clip-path: polygon(0px 65px, 3px 65px,12px 82px,13px 82px,22px 65px,24px 65px,25px 0px,0px 0px);
+}
+
+.fill-overlay[fill-overlay-id="8"] {
+	display: block;
+    left: 430px;
+    top: 124px;
+    height: 20px;
+    width: 8px;
+	-webkit-clip-path: url(#clipPath8);
+}
+
+.fill-overlay[fill-overlay-id="9"] {
+	display: block;
+    left: 431px;
+    top: 147px;
+    height: 8px;
+    width: 6px;
+	-webkit-clip-path: url(#clipPath9);
+}
+
+.fill-overlay[fill-overlay-id="10"] {
+	display: block;
+    left: 441px;
+    top: 123px;
+    height: 23px;
+    width: 7px;
+	-webkit-clip-path: url(#clipPath10);
+}
+
+/*.fill-overlay[fill-overlay-id="10"] {
+	display: block;
+	left: 324px;
+	top: 151px;
+	height: 18px;
+	width: 10px;
+	-webkit-clip-path: polygon(0px 0px, 0px 11px, 2px 11px, 2px 15px, 5px 19px, 8px 14px, 8px 11px, 10px 11px, 10px 0px);
+}*/
+
+.fill-overlay[fill-overlay-id="11"] {
+	display: block;
+    left: 442px;
+    top: 149px;
+    height: 9px;
+    width: 5px;
+	-webkit-clip-path: url(#clipPath11);
+}
+
+.fill-overlay[fill-overlay-id="12"] {
+	display: block;
+    left: 452px;
+    top: 148px;
+    height: 8px;
+    width: 12px;
+	-webkit-clip-path: url(#clipPath12);
+}
+
+.fill-overlay[fill-overlay-id="13"] {
+	display: block;
+    left: 456px;
+    top: 169px;
+    height: 6px;
+    width: 4px;
+	-webkit-clip-path: url(#clipPath13);
+}
+
+.fill-overlay[fill-overlay-id="14"] {
+	display: block;
+    left: 465px;
+    top: 120px;
+    height: 19px;
+    width: 11px;
+	-webkit-clip-path: url(#clipPath14);
+}
+
+.fill-overlay[fill-overlay-id="15"] {
+	display: block;
+	left: 468px;
+	top: 147px;
+	height: 9px;
+	width: 5px;
+	-webkit-clip-path: url(#clipPath15);
+    z-index: 1;
+}
+
+.fill-overlay[fill-overlay-id="16"] {
+	display: block;
+    left: 468px;
+    top: 144px;
+    height: 17px;
+    width: 7px;
+	-webkit-clip-path: url(#clipPath16);
+}
+
+.fill-overlay[fill-overlay-id="17"] {
+	display: block;
+    left: 468px;
+    top: 166px;
+    height: 10px;
+    width: 7px;
+	-webkit-clip-path: url(#clipPath17);
+}
+
+.fill-overlay[fill-overlay-id="28"] {
+	display: block;
+    left: 670px;
+    top: 68px;
+    height: 75px;
+    width: 25px;
+	-webkit-clip-path: url(#clipPath28);
+}
+
+.fill-overlay[fill-overlay-id="29"] {
+	display: block;
+    left: 710.5px;
+    top: 68px;
+    height: 75px;
+    width: 25px;
+	-webkit-clip-path: url(#clipPath28);
+}
+
+.fill-overlay[fill-overlay-id="32"] {
+	display: block;
+    left: 797px;
+    top: 68px;
+    height: 75px;
+    width: 25px;
+	-webkit-clip-path: url(#clipPath28);
+}
+
+.fill-overlay[fill-overlay-id="33"] {
+	display: block;
+    left: 826.5px;
+    top: 68px;
+    height: 75px;
+    width: 25px;
+	-webkit-clip-path: url(#clipPath28);
+}
+
+.fill-overlay[fill-overlay-id="34"] {
+	display: block;
+    left: 855.5px;
+    top: 68px;
+    height: 75px;
+    width: 25px;
+	-webkit-clip-path: url(#clipPath28);
+}
+
+.fill-overlay[fill-overlay-id="35"] {
+	display: block;
+    left: 885px;
+    top: 68px;
+    height: 75px;
+    width: 25px;
+	-webkit-clip-path: url(#clipPath28);
+}
+
+.three-di-view{
+	position: fixed;
+	left: 0px;
+	top: 100px;
+}
+
+#anlage-ansicht-3d{
+	margin-left: 20px;
+	position: fixed;
+}
+
+#anlage-ansicht-2d{
+	margin-left: 20px;
+	position: fixed;
+}
+
+div#three-di-view {
+  position: fixed;
+  margin-left: -20px;
+  margin-top: 60px;
+}
+
+#anlage-ansicht-3d img {
+    height: 205px;
+		width: auto;
+		margin: -3px;
+		 background-blend-mode: multiply;
+}
+
+img.three-di {
+    height: 200px;
+    width: auto;
+    margin: -3px;
+}
+
+img {
+	opacity: 1;
+}
+
+img[data-src] {
+	opacity: 0;
+}
+
+/* Die Punkte auf der Anlage */
+.auswahl-punktXXX{
+	background-image: url("../img/dots.png");
+	background-size: contain;
+	background-repeat: no-repeat;
+	padding: 10px;
+	font-size: 5px;
+	-webkit-animation-duration: .15s;
+	animation-duration: .15s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+  display: block;
+
+}
+.active-auswahl-punktXXX{
+	width: 5px !important;
+	height: 5px !important;
+	background-image: url("../img/zoom.png");
+	/*-webkit-transform: translate3d(0,0,0) !important;
+	transform: translate3d(0,0,0) !important;*/
+  transform: translate(0, 0) !important;
+
+	mix-blend-mode: multiply;
+	padding: 9px;
+  background-repeat: no-repeat;
+}
+
+.active-auswahl-punktXXX .number{
+  display: none;
+}
+
+
+/* Positionen der Punkte bei Sensoring 3D Ansicht */
+
+/* Sensoring: Filter 1*/
+.other #filter-1-point{
+	position: absolute;
+  left: 281px;
+  top: 160px;
+}
+/* Akiver Punkt*/
+.other a#filter-1-point .active-dot{
+
+}
+
+/* Sensoring: Filter 1*/
+#filter-1-point {
+    position: absolute;
+    left: 180px;
+    top: 100px;
+}
+
+ #ati-point {
+    position: absolute;
+    left: 180px;
+    top: 222px;
+}
+
+#zxd-point{
+  position: absolute;
+  left: 180px;
+  top: 238px;
+}
+
+#hfs-point {
+    position: absolute;
+    left: 300px;
+    top: 214px;
+}
+
+#zrd-point {
+    position: absolute;
+    left: 330px;
+    top: 234px;
+}
+
+#dosierer-1-point {
+    position: absolute;
+    left: 370px;
+    top: 171px;
+  }
+
+  #dosierer-2-point {
+    position: absolute;
+    left: 391px;
+    top: 171px;
+}
+
+#dosierer-3-point {
+    position: absolute;
+    left: 411px;
+    top: 171px;
+}
+
+#dosierer-4-point {
+    position: absolute;
+    left: 462px;
+    top: 171px;
+}
+
+#dosierer-5-point {
+    position: absolute;
+    left: 440px;
+    top: 171px;
+}
+
+#zsk-point {
+    position: absolute;
+    left: 409px;
+    top: 212px;
+}
+
+#zsb-point {
+    position: absolute;
+    left: 435px;
+    top: 211px;
+}
+
+#zs_eg-point {
+    position: absolute;
+    left: 475px;
+    top: 215px;
+}
+
+
+#ssd-point {
+    position: absolute;
+    left: 530px;
+    top: 224px;
+}
+
+#sp500-point {
+    position: absolute;
+    left: 560px;
+    top: 220px;
+}
+
+#screener-point {
+    position: absolute;
+    left: 575px;
+    top: 236px;
+}
+
+#zvb-point {
+    position: absolute;
+    left: 582px;
+    top: 246px;
+}
+
+#bxc-point {
+    position: absolute;
+    left: 609px;
+    top: 210px;
+}
+
+#wzk-point {
+    position: absolute;
+    left: 681px;
+    top: 160px;
+}
+
+#ibp250-point {
+    position: absolute;
+    left: 740px;
+    top: 246px;
+}
+
+#wet-point {
+    position: absolute;
+    left: 815px;
+    top: 160px;
+}
+
+/* Akiver Punkt*/
+a#filter-1-point .active-dot{
+
+}
+
+/* Sensoring: ATI */
+.other #ati-point{
+	position: absolute;
+	left: 280px;
+	top: 235px;
+}
+/* Akiver Punkt*/
+.other a#ati-point .active-dot{
+
+}
+
+/* Sensoring: ZXD */
+.other #zxd-point{
+	position: absolute;
+	left: 280px;
+	top: 258px;
+}
+/* Akiver Punkt*/
+.other a#zxd-point .active-dot{
+
+}
+
+/* Sensoring: HFS */
+.other #hfs-point{
+	position: absolute;
+	left: 353px;
+	top: 255px;
+}
+/* Akiver Punkt*/
+.other a#hfs-point .active-dot{
+
+}
+
+/* Sensoring: ZRD */
+.other #zrd-point{
+	position: absolute;
+	left: 367px;
+	top: 250px;
+}
+/* Akiver Punkt*/
+.other a#zrd-point .active-dot{
+
+}
+
+/* Sensoring: Dosierer 1 */
+.other #dosierer-1-point{
+	position: absolute;
+  left: 455px;
+  top: 225px;
+
+}
+/* Akiver Punkt*/
+.other a#dosierer-1-point .active-dot{
+
+}
+
+/* Sensoring: Dosierer 2 */
+.other #dosierer-2-point{
+	position: absolute;
+  left: 464px;
+  top: 225px;
+}
+/* Akiver Punkt*/
+.other a#dosierer-2-point .active-dot{
+
+}
+
+/* Sensoring: Dosierer 3 */
+.other #dosierer-3-point{
+	position: absolute;
+  left: 478px;
+  top: 240px;
+}
+/* Akiver Punkt*/
+.other a#dosierer-3-point .active-dot{
+
+}
+
+/* Sensoring: Dosierer 4 */
+.other #dosierer-4-point{
+	position: absolute;
+  left: 492px;
+  top: 225px;
+}
+/* Akiver Punkt*/
+.other a#dosierer-4-point .active-dot{
+
+}
+
+
+/* Sensoring: Dosierer 5 */
+.other #dosierer-5-point{
+	position: absolute;
+  left: 491px;
+  top: 247px;
+}
+/* Akiver Punkt*/
+.other a#dosierer-5-point .active-dot{
+
+}
+
+/* Sensoring: ZSK */
+.other #zsk-point{
+	position: absolute;
+  left: 460px;
+  top: 255px;
+}
+/* Akiver Punkt*/
+.other a#zsk-point .active-dot{
+
+}
+
+/* Sensoring: ZSB */
+.other #zsb-point{
+	position: absolute;
+  left: 486px;
+  top: 255px;
+}
+/* Akiver Punkt*/
+.other a#zsb-point .active-dot{
+
+}
+
+
+/* Sensoring: ZS_EG */
+.other #zs_eg-point{
+	position: absolute;
+  left: 499px;
+  top: 255px;
+}
+/* Akiver Punkt*/
+.other a#zs_eg-point .active-dot{
+
+}
+
+
+/* Sensoring: SSD */
+.other #ssd-point{
+	position: absolute;
+  left: 550px;
+  top: 256px;
+}
+/* Akiver Punkt*/
+.other a#ssd-point .active-dot{
+
+}
+
+/* Sensoring: SP500 */
+.other #sp500-point{
+	position: absolute;
+  left: 580px;
+  top: 251px;
+}
+/* Akiver Punkt*/
+.other a#sp500-point .active-dot{
+
+}
+
+/* Sensoring: ZVB */
+.other #zvb-point{
+	position: absolute;
+  left: 593px;
+  top: 267px;
+}
+/* Akiver Punkt*/
+.other a#zvb-point .active-dot{
+
+}
+
+/* Sensoring: Screener */
+.other #screener-point{
+	position: absolute;
+  left: 593px;
+  top: 260px;
+}
+/* Akiver Punkt*/
+.other a#screener-point .active-dot{
+
+}
+
+
+/* Sensoring: BXC */
+.other #bxc-point{
+	position: absolute;
+  left: 629px;
+  top: 233px;
+}
+/* Akiver Punkt*/
+.other a#bxc-point .active-dot{
+}
+
+/* Sensoring: WZK */
+.other #wzk-point{
+	position: absolute;
+  left: 696px;
+  top: 126px;
+}
+/* Akiver Punkt*/
+.other a#wzk-point .active-dot{
+}
+
+/* Sensoring: IBP */
+.other #ibp250-point{
+	position: absolute;
+  left: 743px;
+  top: 250px;
+}
+/* Akiver Punkt*/
+.other a#ibp250-point .active-dot{
+}
+
+/* Sensoring: IBP */
+.other #wet-point{
+	position: absolute;
+  left: 830px;
+  top: 126px;
+}
+/* Akiver Punkt*/
+.other a#wet-point .active-dot{
+}
+
+/*CLICKPOINTS*/
+.auswahl-punkt {
+
+  display: block;
+  position: fixed;
+  width: 24px;
+  height: 24px;
+  margin-left: -12px;
+  margin-right: -12px;
+  text-align: center;
+  line-height: 1.245;
+  transform-origin: center;
+  background-image: url("../img/dots.png");
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+.opacitySize{
+  opacity: .8;
+  transform: scale(.5) !important;
+}
+
+.active-auswahl-punkt {
+
+  background-image: url("../img/zoom.png");
+  opacity: 1;
+  transform: scale(1) !important;
+  opacity: 1 !important;
+}
+
+.auswahl-punkt .number {
+
+  font-size: 5px;
+  font-family: "Gotham", sans-serif;
+  color: #333;
+  margin-left: 5px;
+}
+
+.active-auswahl-punkt .number {
+
+  display: none;
+}

@@ -1,0 +1,78 @@
+Störmeldungen (rot)
+
+{
+  "id": "error-red-01",
+  "date": "2016-10-10 12:56:10",
+  "type": "error",
+  "title": "Error #1285",
+  "popUpTitle": "Barrel #6 cannot be heated over 90°C!",
+  "description": "Barrel #6 // HEATING // In progress. <br />Result: Malfunctioning cooling valve. Error has been solved.",
+  "image": "Stoermeldung_1.barrel_small.png"
+},
+{
+  "id": "error-red-04",
+  "date": "2016-10-18 09:21:42",
+  "type": "error",
+  "title": "Error #1874",
+  "popUpTitle": "Start up not possible due to faults.",
+  "description": "Start up not possible due to faults. <br />Result: hydraulic cylinder malfunction due to leakage. Start up has been interlocked by malfunctioning hydraulic cylinder. Spare part installed by Jim Smith.",
+  "image": "Stoermeldung_4.startup_small.png"
+},
+{
+  "id": "error-red-05",
+  "date": "2016-10-23 16:40:31",
+  "type": "error",
+  "title": "Error #2065",
+  "popUpTitle": "Start up has been blocked by temperature controller … Start up not possible.",
+  "description": "Start up has been blocked by temperature controller … Start up not possible. <br />Result: Start up has been interlocked due to malfunction in temperature controller. Controller exchanged.",
+  "image": "Stoermeldung_5.temperaturecontroller_small.png"
+},
+
+
+Störmeldungen
+
+{
+  "id": "error-01",
+  "date": "",
+  "type": "error",
+  "title": "Error #1285",
+  "popUpTitle": "Barrel #6 cannot be heated over 90°C!",
+  "description": "Barrel #6 // HEATING // In progress. <br />Result: Malfunctioning cooling valve. Error has been solved.",
+  "image": "Stoermeldung_1.barrel.png"
+},
+{
+  "id": "error-02",
+  "date": "",
+  "type": "error",
+  "title": "Error #1349",
+  "popUpTitle": "Emergency stop button pressed!",
+  "description": "Emergency stop button pressed! <br />Result: emergency stop device signal malfunction. Exchange of device completed by John Huber.",
+  "image": "Stoermeldung_2.stopbutton.png"
+},
+{
+  "id": "error-03",
+  "date": "",
+  "type": "error",
+  "title": "Error #1491",
+  "popUpTitle": "Various problems occured in the system.",
+  "description": "Sources for the various alarms have been detected via CSB. <br />Result: Defective signal input. Signal input has been rewired in the software via remote access.",
+  "image": "Stoermeldung_3.various.png"
+},
+{
+  "id": "error-04",
+  "date": "",
+  "type": "error",
+  "title": "Error #1874",
+  "popUpTitle": "Start up not possible due to faults.",
+  "description": "Start up not possible due to faults. <br />Result: hydraulic cylinder malfunction due to leakage. Start up has been interlocked by malfunctioning hydraulic cylinder. Spare part installed by Jim Smith.",
+  "image": "Stoermeldung_4.startup.png"
+},
+{
+  "id": "error-05",
+  "date": "",
+  "type": "error",
+  "title": "Error #2065",
+  "popUpTitle": "Start up has been blocked by temperature controller … Start up not possible.",
+  "description": "Start up has been blocked by temperature controller … Start up not possible. <br />Result: Start up has been interlocked due to malfunction in temperature controller. Controller exchanged.",
+  "image": "Stoermeldung_5.temperaturecontroller.png"
+},

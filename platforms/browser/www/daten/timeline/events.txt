@@ -1,0 +1,60 @@
+{
+	"id": "optimisation-01",
+	"date": "2016-10-07 07:55:16",
+	"type": "optimisation",
+	"title": "Bridging",
+	"description": "<b>Registry Entry</b><br/>Conveying pressure low<br/><b>Suspicion</b><br/>Bridging in Silo 2<br/><b>Solution</b> <br/>Silofluidisation (Pulsator) in ATI activated",
+	"image": "img/timeline/events/01_bridging_diagramm.png",
+	"image_big": "01_bridging_zeichnung.png"
+}, {
+	"id": "optimisation-02",
+	"date": "2016-10-11 18:14:30",
+	"type": "optimisation",
+	"title": "Leakage in Conveying System /
+	Wear in Rotary Valve",
+	"description": "<b>Registry Entry</b><br/>Conveying pressure constantly increasing for 5 hours<br/><b>Suspicion</b> <br/>Leakage in Conveying System / Wear in Rotary Valve<br/><b>Solution</b> <br/>Performance is increased",
+	"image": "img/timeline/events/02_leakage_01_diagramm.png",
+	"image_big": "img/timeline/events/02_leakage_01_zeichnung.png"
+}, {
+	"id": "optimisation-03",
+	"date": "2016-10-21 12:27:30",
+	"type": "optimisation",
+	"title": "Uncontrolled Material Flow",
+	"description": "<b>Registry Entry</b><br/>Synced peaks of torque (Extruder) and refilling (Feeder) every 150 seconds<br/><b>Suspicion</b> <br/>Uncontrolled material flow in volumetric mode<br/><b>Solution</b> <br/>Extruder increases low-level, to avoid ÑDurchschieﬂenî",
+	"image": "img/timeline/events/03_uncontrolled_flow_diagramm.png",
+	"image_big": "img/timeline/events/03_uncontrolled_flow_zeichnung.png"
+}, {
+	"id": "optimisation-04",
+	"date": "2016-10-31 15:23:32",
+	"type": "optimisation",
+	"title": "Leakage in Conveying System / Wear in Rotary Valve",
+	"description": "<b>Registry Entry</b><br/>Conveying pressure constantly increasing for 5 hours<br/><b>Suspicion</b><br/>Leakage in Conveying System / Wear in Rotary Valve<br/><b>Solution</b><br/>Performance is increased",
+	"image": "img/timeline/events/04_leakage_02_diagramm.png",
+	"image_big": "img/timeline/events/04_leakage_02_zeichnung.png"
+}, {
+	"id": "warning-01",
+	"date": "2016-10-14 08:49:23",
+	"type": "warning",
+	"title": "Filterbags have been replaced",
+	"description": "Filter differential pressure abnormal high value = 18 mbar.",
+	"image": "img/timeline/events/Warnung_2.filter_zu_hoch_druck.png"
+},
+
+{
+"id": "warning-02",
+"date": "2016-10-22 10:11:20",
+"type": "warning",
+"title": "Conveying pressure low <= 200 mbar",
+"description": "No / insufficient product feed in pressure conveying line of finished product handling. ",
+"image": "ProductHandling_zuwenig.png"
+},
+
+{
+"id": "warning-03",
+"date": "2016-10-25 11:07:20",
+"type": "warning",
+"title": "Conveying pressure low = -250 mbar",
+"description": "No / insufficient product feed in suction conveying line.",
+"image": "Silo.png"
+},
+

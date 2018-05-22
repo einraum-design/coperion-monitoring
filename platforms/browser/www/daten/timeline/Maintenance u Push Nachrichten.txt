@@ -1,0 +1,95 @@
+
+Maitenance (blau):
+
+{
+"id": "maintenance-01",
+"date": "2016-10-06 18:07:20",
+"type": "maintenance",
+"title": "Filterbags",
+"description": "Filter differential pressure abnormal high value = 18 mbar. <br/>Filterbags have been replaced.",
+"image": "Meldungen_1.Filtertaschen.png"
+},
+
+{
+"id": "maintenance-02",
+"date": "2016-10-11 09:05:30",
+"type": "maintenance",
+"title": "ATI",
+"description": "Fluidisation fabric in ATI has been replaced after 16.000 operating hours.",
+"image": "Meldungen_3.Beloftungstucher.png"
+},
+
+{
+"id": "maintenance-03",
+"date": "2016-10-17 16:16:10",
+"type": "maintenance",
+"title": "ZXD - rotary valve",
+"description": "Bearings and Sealings on ZXD-rotary valve have been replaced during Inspection after 8.000 operating hours",
+"image": "Meldungen_4.LuDZXD.png"
+},
+
+
+Maintenance Zukunft (blau):
+
+{
+"id": "maintenance-04",
+"date": "2016-10-26 08:19:10",
+"type": "maintenance",
+"title": "HFS - Elutriator Fans",
+"description": "Bearings and Sealing on HFS-Elutriator Fans should be replaced after 8.000 operating hours.",
+"image": "Meldungen_6.LuDZRD.png"
+},
+
+{
+"id": "maintenance-05",
+"date": "2016-11-05 06:55:19",
+"type": "maintenance",
+"title": "ZVB - rotary valve",
+"description": "Bearings and Sealings on ZVB-rotary valve should be replaced after 8.000 operating hours.",
+"image": "Meldungen_7.LuDZVB.png"
+},
+
+{
+"id": "maintenance-06",
+"date": "2016-11-08 06:18:13",
+"type": "maintenance",
+"title": "WZK diverter valve",
+"description": "WZK diverter valve should be cleaned after 4.000 operating hours.",
+"image": "Meldungen_8.WZK.png"
+},
+
+
+Push Nachrichten (blau):
+
+{
+"id": "push-01",
+"date": " wird jetzt ausgelöst ",
+"type": "maintenance",
+"title": "ZSK",
+"description": "The gearbox oil quality will expire in 4 weeks. <br/>
+
+
+
+Would you like to schedule an appointment with the Coperion service? 
+<br/>The appointment has been scheduled for Oct. 27, 2016 at 1:30 pm. <br/>
+The Service technician John Doe has been informed.",
+"image": "PushNachricht_1.und2.ZSK.png"
+},
+
+{
+"id": "push-01",
+"date": " wird jetzt ausgelöst ",
+"type": "maintenance",
+"title": "ZSK",
+"description": "The ZSK drive bearing should be exchanged within the next 6 weeks.
+Would you like to place an order for a Coperion maintenance service and order spare parts through MyCoperion?
+<br/>The appointment has been scheduled for Nov. 02, 2016 at 9:00 am. <br/>
+The Service technician John Doe has been informed",
+"image": "PushNachricht_1.und2.ZSK.png"
+},
+
+
+
+
+
+

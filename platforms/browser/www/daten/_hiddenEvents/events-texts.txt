@@ -1,0 +1,178 @@
+Übersetzung von Fallbeispielen
+
+Aktuelle Störmeldungen (Wartung):
+
+
+1. Störmeldung # 0158
+
+Gehäuse #6 kann nicht über 90°C geheizt werden!
+
+[ Verbindung zu Coperion Service-Box wird aufgebaut. Daten werden an Coperion weitergeleitet.
+oder
+Verbindung zur Instandhaltung wird aufgebaut: Daten werden weitergeleitet.
+
+Ticketnummer : 248598 
+Coperion setzt sich mit Ihnen in Verbindung.] 
+
+Gehäuse # 06     //  Heizung // In Bearbeitung.
+
+Analyse ergab: Defektes Kühlventil. Fehler wurde behoben!
+
+
+Error # 0158
+Barrel #6 cannot be heated over 90°C!
+[Connection to Coperion ServiceBox is being established. Information will be forwarded to Coperion.
+Or
+Connection to Maintenance team is being established. Information will be forwarded.
+
+Ticket no.: 248598
+Coperion will contact you.]
+
+Barrel #6  // HEATING // In progress.
+Result: Malfunctioning cooling valve. Error has been solved.
+________________________________________________________
+
+2. Störmeldung # 0159
+
+Not – Halt Stop gedrückt!
+[Verbindung zu  ...]
+Analyse ergab: Schaltsignal des Not-Aus-Gerätes war defekt. Austausch  des Gerätes durch Herrn Huber erfolgt!
+
+
+Error # 0159
+Emergency stop button pressed!
+[Connection to …]
+Result: emergency stop device signal malfunction. Exchange of device completed by John Huber.
+___________________________________________________________
+
+3. Störmeldung # 0160
+
+Es sind unterschiedliche Probleme an der Anlage aufgetreten!
+[...]
+Via CSB   wurden die Quellen der unterschiedlichen Alarme ermittelt. 
+Analyse ergab: Defekter Signaleingang. Signaleingang wurde via Remote softwaretechnisch um verdrahtet!
+
+Error #0160
+
+Various problems occured in the system.
+[…]
+Sources for the various alarms have been detected via CSB.
+Result: Defective signal input. Signal input has been rewired in the software via remote access.
+
+____________________________________________________________
+
+4. Störmeldung # 0161
+
+Anlage kann aufgrund Störungen nicht gestartet werden!
+[...]
+Analyse ergab: Aufgrund Undichtigkeit verlangsamte sich  ein Hydraulikzylinder. 
+Die Freigabe  wurde vom defekten Hydraulikzylinder blockiert. 
+Ersatzteil wurde durch Herrn Schulz eingebaut!
+
+Error #0161
+
+Start up not possible due to faults.
+[…]
+Result: hydraulic cylinder malfunction due to leakage. Start up has been interlocked by malfunctioning hydraulic cylinder. Spare part installed by Jim Smith.
+
+_____________________________________________________________
+
+
+5. Störmeldung # 0162
+
+Keine Freigabe von den Heizreglern!  Anlage kann nicht gestartet werden!
+[...]
+Analyse ergab: Blockierung der Freigabe aufgrund eines defekten Temperaturreglers. Regler wurde ausgetauscht! 
+
+Error # 0162
+
+Start up has been blocked by temperature controller … Start up not possible.
+[…]
+Result: Start up has been interlocked due to malfunction in temperature controller. Controller exchanged. 
+__________________________________________________________
+
+
+6. Störmeldung # 0163
+
+Wellenbruch!
+]
+Analyse ergab: Anhand der  analysierten Werte konnte ermittelt werden, dass ein zu hoher Anpressdruck an der UG gefahren worden ist und dadurch sich die Messer in der Lochplatte verfangen hatten. Dies führte  schließlich zum Bruch.
+
+Error # 0163
+
+Breakage of cutter shaft.
+[…]
+Result: Based on the analysed data the contact pressure at the underwater pelletizer (UG) was too high causing high force on the cutter shaft. This caused the breakage.
+
+
+__________________________________________________________
+
+
+
+Aktuelle Störmeldungen (Verfahrenstechnik):
+
+1. Störmeldung # 0245
+
+Dosierung 1. fehlgeschlagen!
+[…]
+Analyse ergab: Falsche Dosierschnecke bei Produktwechsel von Pulver auf Granulat!
+
+
+Error # 0245
+Feeder #1 failed error
+[…]
+Result: Wrong feeder screws caused by product change from powder to pellets!
+______________________________________________________
+
+2. Störmeldung # 0246
+
+Starke Große Temperaturabweichung bei Gehäuse XY!
+[…] 
+Analyse ergab: Keine ausreichende Kühlung aufgrund einer Mischzone in der Schnecke!
+
+
+Error # 0246
+Barrel #1  High temperature deviation!
+[…]
+Result: Insufficient cooling due to kneading elements in the screw profile.
+______________________________________________________
+
+3. Störmeldung # 0247
+
+Zu hohes Drehmoment!
+[…]
+Analyse ergab: Peaks aufgrund schwankender Dosierung
+
+
+Error # 0247
+Torque spikes!
+[…]
+Result: Fluctuating feed due to deviation of feeding system 
+______________________________________________________
+
+
+4. Störmeldung # 0248
+
+Zu geringer Schmelzedruck!
+[...]
+Analyse ergab: Geringer Schmelzedruck aufgrund zu niedriger Dosiermenge des Füllstoffes.
+
+Error # 0248
+Melt pressure too low!
+[…]
+Result: Low melt pressure due to filler feeder under feeding
+
+______________________________________________________
+
+
+5. Störmeldung # 0249
+
+Extruder XY schaltet bei laufender Dosierung ab!
+[…]
+Analyse ergab: Leerlaufdrehmoment zu hoch eingestellt.
+
+
+Error # 0249
+Extruder XY turns off while feeder still running.
+[…]
+Result: Idle running torque limit was set too low.

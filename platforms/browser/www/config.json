@@ -1,0 +1,1 @@
+{"port":9000,"forceClose":true,"ping":true,"pingInterval":1000,"closeTimeout":2000,"logLevel":"warn","host":"192.168.2.245"}

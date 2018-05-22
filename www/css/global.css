@@ -1,0 +1,1559 @@
+@import url(timeline.css);
+
+@font-face {
+	font-family: "Gotham";
+	src: url("ci-font/gothambold.ttf") format("truetype");
+	font-style: normal;
+	font-weight: bold;
+}
+@font-face {
+	font-family: "Gotham";
+	src: url("ci-font/gothamboldita.ttf") format("truetype");
+	font-style: italic;
+	font-weight: bold;
+}
+@font-face {
+	font-family: "Gotham";
+	src: url("ci-font/gothamlight.ttf") format("truetype");
+	font-style: normal;
+	font-weight: 100;
+}
+@font-face {
+	font-family: "Gotham";
+	src: url("ci-font/gothamlightita.ttf") format("truetype");
+	font-style: italic;
+	font-weight: 100;
+}
+@font-face {
+	font-family: "Gotham";
+	src: url("ci-font/gothambook.ttf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
+}
+@font-face {
+	font-family: "Gotham";
+	src: url("ci-font/gothambookita.ttf") format("truetype");
+	font-style: italic;
+	font-weight: normal;
+}
+
+#points-sensoren{
+	position: fixed;
+	top: 200px;
+	left: 200px;
+}
+
+
+html {
+	font-family: sans-serif;
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	-webkit-user-select: none;
+}
+
+body {
+	margin: 0;
+	font-family: "Gotham", sans-serif;
+	background-color: #FFF;
+  -webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.app-tab {
+	display: none;
+}
+
+.app-tab.active {
+	display: block;
+}
+
+
+p{
+  font-family: "Gotham" !important;
+}
+
+h2{
+	margin: 0px;
+	padding: 0px 20px;
+	font-size: 12pt;
+	color: #2e2e2e;
+}
+
+h3{
+	color: #2e2e2e;
+}
+
+h4{
+	color: #2e2e2e;
+}
+
+h5{
+	margin-bottom: 7px;
+	color: #2e2e2e;
+}
+
+h6{
+	font-weight: normal;
+	color: #2e2e2e;
+}
+
+.recipe-running{
+	margin-top: 15px;
+	font-size: 20px;
+}
+
+
+li{
+	list-style-type: none;
+	color: #2e2e2e;
+}
+
+.bold{
+	font-weight: bold;
+}
+
+.hidden{
+	display: none;
+}
+
+.rohstoffe-inhalte{
+	font-size: 13px !important;
+	line-height: 1.3em;
+}
+
+.rohstoffe-code{
+	font-size: 13px !important;
+	line-height: 1.3em;
+}
+
+sub {
+  font-size: 8px;
+	vertical-align: text-top;
+	margin-top: 0px;
+	line-height: 120%;
+}
+
+
+
+/* Zweite Ebene Navigation und Close Button der Navigation */
+
+.second-row-navigation {
+  margin-left: 30px !important;
+}
+
+/* PLACEHOLDER FÜR DIE GRAFEN */
+
+.graph-title{
+	font-size: 12px;
+	padding: 5px 8px;
+}
+
+
+/* Startseite Sensoring*/
+.dummy-1{
+	width: 100%;
+	height: 91px;
+	margin-bottom: 11px;
+	background-color: #ebeaea;
+}
+
+.dummy-2{
+	width: 500px;
+	height: 252px;
+	margin-top: 15px;
+	margin-bottom: 11px;
+	margin-right: -10px;
+	float: left;
+	background-color: #ebeaea;
+}
+
+.chart-big{
+	width: 980px;
+	height: 252px;
+	margin-top: 15px;
+	margin-bottom: 11px;
+	margin-right: -10px;
+	float: left;
+	background-color: #ebeaea;
+}
+
+.more-graphs{
+	float: left;
+}
+
+.graph-thin{
+	width: 500px;
+	margin-top: 15px;
+	height: 51px;
+
+}
+
+.in-betrieb{
+	background-image: url('../img/on.jpg');
+}
+
+/* Komponenten Steckbriefe */
+
+.komponenten-infobox{
+	height: 260px;
+	float: right;
+	width: 47%;
+	margin-top: 15px;
+	font-size: 12px;
+	line-height: 1.37em;
+}
+
+.komponenten-titel{
+	font-size: 18px;
+	margin-bottom: 2px;
+}
+
+.komponenten-strong{
+	font-weight: 600;
+}
+
+.komponenten-id{
+	font-size: 10px;
+}
+
+.product-id{
+	margin-right: 10px;
+}
+
+.komponenten-information{
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+.komponenten-maintenance{
+	width: 138px;
+	padding: 5px;
+	float: left;
+	border-radius: 2px;
+	margin-right: 5px;
+}
+
+.grey-box{
+	background-color: rgba(239,239,239,.8);
+}
+
+.blue-box{
+	background-color: rgba(227,233,239,.8);
+}
+
+.komponenten-maintenance:last-child{
+	margin-right: 0px !important;
+}
+
+
+.clear{
+	display: block;
+	clear: both;
+}
+
+.kompontenten-replacement{
+	width: 424px;
+	padding: 15px 15px;
+	margin-top: 10px;
+	border-radius: 2px;
+	background-color: rgba(239,239,239,.8);
+}
+
+.komponenten-order-button{
+	float: right;
+	padding: 7px 35px;
+	border-radius: 3px;
+	background-color: #7f9bbd;
+	color: #fff;
+	margin-top: -7px;
+}
+
+.komponenten-bottom{
+	position: fixed;
+	bottom: 80px;
+}
+
+#first-row > div{
+	padding: 0px 20px;
+	margin-top: 3px;
+}
+
+#first-row > div img{
+	width: 100%;
+}
+
+#first-row-rohstoffe > div{
+	padding: 0px 20px;
+	margin-top: 3px;
+}
+
+#first-row-rohstoffe > div img{
+	width: 100%;
+}
+
+/* Hide "Full" Link on Overview Page  */
+
+li#full-link.ui-tabs-active{
+	display: none;
+}
+
+/* Dropdown Navigation */
+
+.wrapper {
+    position: relative;
+    width: 200px;
+    padding: 10px;
+    margin: 0 auto;
+
+    /* Styles */
+    background: #9bc7de;
+    color: #fff;
+    outline: none;
+    cursor: pointer;
+
+    /* Font settings */
+    font-weight: bold;
+}
+
+.wrapper::after {
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    margin-top: -6px;
+    border-width: 6px 0 6px 6px;
+    border-style: solid;
+    border-color: transparent #fff;
+}
+
+.dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #fff;
+    font-weight: normal; /* Overwrites previous font-weight: bold; */
+    opacity: 1;
+}
+
+.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+:focus{
+	outline: 0px !important;
+}
+
+.wrapper:after {
+    border-color: #9bc7de transparent;
+    border-width: 6px 6px 0 6px ;
+    margin-top: -3px;
+}
+
+.wrapper.active {
+  background: #9bc7de;
+  background: linear-gradient(to right, #9bc7de 0%, #9bc7de 78%, #ffffff 78%, #ffffff 100%);
+}
+
+
+/* 2D view und 3D View Start*/
+
+.other .upstream-view{
+	transform:translate(200px, -50px) scale(2.3);
+}
+
+.upstream-view{
+	transform:translate(200px, -50px) scale(3.3);
+}
+
+.other a.upstream-start{
+  position: fixed !Important;
+  left: 20px;
+  top: 110px !important;
+  width: 348px;
+  height: 219px;
+  -webkit-box-shadow: 0px 0px 15px -4px rgba(0,0,0,.2);
+  text-align: center;
+  padding-top: 20px;
+  font-size: 18px;
+	mix-blend-mode: multiply;
+	color: #333;
+}
+
+.other a.compounding-start{
+  position: fixed !Important;
+  left: 399px;
+top: 110px !important;
+width: 185px;
+  height: 219px;
+  -webkit-box-shadow: 0px 0px 15px -4px rgba(0,0,0,.2);
+  text-align: center !important;
+  padding-top: 20px !important;
+  font-size: 18px !important;
+  background-color: none !important;
+  mix-blend-mode: multiply;
+  color: #333 !important;
+}
+
+.other a.downstream-start{
+	position: fixed !Important;
+	left: 615px;
+	top: 110px !important;
+	width: 369px;
+	height: 219px;
+	-webkit-box-shadow: 0px 0px 15px -4px rgba(0,0,0,.2);
+	text-align: center !important;
+	padding-top: 20px !important;
+	font-size: 18px !important;
+	mix-blend-mode: multiply;
+	color: #333 !important;
+}
+
+.components li a span{
+	transition: all .1s ease-in-out;
+}
+
+/* Sensoren in der 3D Ansicht*/
+
+/* 3D SENSORS UPSTREAM*/
+
+/* FILTER */
+.other .sensor-1{
+  position: fixed;
+  top: 120px;
+  left: 405px;
+  pointer-events: auto;
+}
+
+/* ATI */
+.other .sensor-2{
+  position: fixed;
+  top: 230px;
+  left: 405px;
+  pointer-events: auto;
+}
+
+/* ZXD */
+.other .sensor-3{
+  position: fixed;
+  top: 290px;
+  left: 405px;
+  pointer-events: auto;
+}
+
+/* HFS */
+.other .sensor-4{
+  position: fixed;
+  top: 250px;
+  left: 697px;
+  pointer-events: auto;
+}
+
+/*ZRD */
+.other .sensor-5{
+  position: fixed;
+  top: 310px;
+  left: 647px;
+  pointer-events: auto;
+}
+
+/* ENDE 3D SENSORS UPSTREAM*/
+
+/* 3D SENSORS COMOUNDING */
+
+/* Dosierer 1 */
+.other .sensor-6{
+  position: fixed;
+  top: 200px;
+  left: 360px;
+  pointer-events: auto;
+}
+
+/* Dosierer 2 */
+.other .sensor-7{
+  position: fixed;
+  top: 200px;
+  left: 395px;
+  pointer-events: auto;
+}
+
+/* Dosierer 3 */
+.other .sensor-8{
+  position: fixed;
+  top: 260px;
+  left: 437px;
+  pointer-events: auto;
+}
+
+/* Dosierer 4 */
+.other .sensor-9{
+  position: fixed;
+  top: 260px;
+  left: 474px;
+  pointer-events: auto;
+}
+
+/* Dosierer 5 */
+.other .sensor-10{
+  position: fixed;
+  top: 200px;
+  left: 475px;
+  pointer-events: auto;
+}
+
+/* ZSK */
+.other .sensor-11{
+  position: fixed;
+  top: 300px;
+  left: 380px;
+  pointer-events: auto;
+}
+
+/* ZSB */
+.other .sensor-12{
+  position: fixed;
+  top: 300px;
+  left: 420px;
+  pointer-events: auto;
+}
+
+/* ZS_EG */
+.other .sensor-13{
+  position: fixed;
+  top: 300px;
+  left: 510px;
+  pointer-events: auto;
+}
+
+/* Strand Suction Device */
+.other .sensor-14{
+  position: fixed;
+  top: 300px;
+  left: 675px;
+  pointer-events: auto;
+}
+
+/* SP 500 // Pelletizer */
+.other .sensor-15{
+  position: fixed;
+  top: 250px;
+  left: 840px;
+  pointer-events: auto;
+}
+
+/* Screener */
+.other .sensor-16{
+  position: fixed;
+  top: 270px;
+  left: 880px;
+  pointer-events: auto;
+}
+
+/* ZVB */
+.other .sensor-17{
+  position: fixed;
+  top: 290px;
+  left: 900px;
+  pointer-events: auto;
+}
+
+/* ENDE 3D SENSOREN COMOUNDING*/
+
+/* 3D SENSOREN DOWNSTREAM*/
+
+
+.rohstoff-dummy{
+	padding-top: 10px;
+}
+
+.active-dot .number{
+	display: none;
+}
+
+.other #bxc{
+	position: absolute;
+	left: 700px;
+	top: 170px;
+}
+
+#bxc{
+	position: absolute;
+	left: 420px;
+	top: 0px;
+}
+
+.other a#bxc .active-dot{
+	position: fixed;
+	left: 738px;
+	top: 163px;
+	pointer-events: none;
+}
+
+a#bxc .active-dot{
+	position: fixed;
+	left: 797px;
+	top: 120px;
+	pointer-events: none;
+}
+
+#bxc .active-dot .anlagen-bild{
+	background-color: red;
+}
+
+.other #wzk{
+	position: absolute;
+	left: 753px;
+  top: 170px;
+}
+
+#wzk{
+	position: absolute;
+	left: 420px;
+	top: 0px;
+}
+
+.other a#wzk .active-dot{
+	position: fixed;
+	left: 738px;
+	top: 163px;
+	pointer-events: none;
+}
+
+a#wzk .active-dot{
+	position: fixed;
+	left: 797px;
+	top: 120px;
+	pointer-events: none;
+}
+
+#wzk .active-dot .anlagen-bild{
+	background-color: red;
+}
+
+
+
+/* BXC */
+.other .sensor-18{
+  position: fixed;
+  top: 225px;
+  left: 280px;
+  pointer-events: auto;
+}
+
+/* WZK */
+.other .sensor-19{
+  position: fixed;
+	top: 95px;
+  left: 423px;
+  pointer-events: auto;
+}
+
+/* FUS */
+.other .sensor-20{
+  position: fixed;
+  top: 240px;
+  left: 423px;
+  pointer-events: auto;
+}
+
+/* IBP250 */
+.other .sensor-21{
+  position: fixed;
+  top: 305px;
+  left: 502px;
+  pointer-events: auto;
+}
+
+/* WET */
+.other .sensor-22{
+  position: fixed;
+	top: 95px;
+  left: 870px;
+  pointer-events: auto;
+}
+
+/* ENDE 3D SENSOREN DOWNSTREAM*/
+
+/* HEADER */
+
+h1{
+	margin-top: 28px;
+	text-align: center;
+	font-size: 14pt;
+}
+
+#header h2{
+	display: block;
+	position: absolute;
+	font-weight: normal;
+	top: 28px;
+	right: 110px;
+	font-size: 14pt;
+	color: #7c9cbb;
+	padding: 0;
+	float: right;
+}
+
+.left img{
+	/*position: absolute;
+	margin: 10px 20px;*/
+}
+
+.right{
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  background-color: #7c9cbb;
+  right: 0px;
+  top: 0px;
+}
+
+.right img{
+  width: 24px;
+  height: auto;
+  padding: 18px;
+}
+
+#header{
+	width: 100%;
+	height: 75px;
+	background-color: rgba(255,255,255,0.8);
+	z-index: 1;
+}
+
+.lazy{
+	background-size: contain;
+}
+
+/* Toggle Switch */
+
+#toggle-switch {
+	position: fixed;
+	right: 20px;
+	top: 70px;
+	z-index: 99;
+	display: flex;
+	align-items: center;
+}
+
+#toggle-switch .ui-flipswitch {
+	width: 3.875em;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+#toggle-switch .ui-flipswitch.ui-flipswitch-active {
+  padding-left: 2em;
+  width: 1.875em;
+}
+#toggle-switch .ui-flipswitch-on {
+	background-color: #fff;
+	width: 16px;
+	height: 16px;
+	margin-top: 4px;
+	margin-left: 4px;
+	border: none;
+}
+
+
+/* Styles Graphen */
+
+.graph{
+	padding: 0px;
+}
+
+.graph-content h4{
+	position: fixed;
+  top: 96px;
+  left: 20px;
+}
+
+/* Förderdruck Link Verstecken */
+/* Dieser Punkt muss immer mit Upstream verbunden sein */
+
+li#foerderdruck{
+	display: none;
+	width: 0px;
+}
+
+a#foerderdruck-link{
+	display: none;
+}
+
+
+/* Animation bei Startansicht Sensoren */
+
+a.upstream-start{
+  position: fixed !Important;
+  left: 20px;
+  top: 110px !important;
+  width: 330px;
+  height: 219px;
+	background-color: transparent !important;
+  -webkit-box-shadow: 0px 0px 15px -4px rgba(0,0,0,.2);
+  text-align: center !important;
+  padding-top: 20px !important;
+  font-size: 18px !important;
+	/*transition: all .4s ease-in-out;*/
+	color: #333 !important;
+}
+
+a.compounding-start{
+  position: fixed !Important;
+  left: 385px;
+  top: 110px !important;
+  width: 242px;
+  height: 219px;
+	background-color: transparent !important;
+  -webkit-box-shadow: 0px 0px 15px -4px rgba(0,0,0,.2);
+	text-align: center !important;
+  padding-top: 20px !important;
+  font-size: 18px !important;
+	/*transition: all .4s ease-in-out;*/
+	color: #333 !important;
+}
+
+a.downstream-start{
+  position: fixed !Important;
+  left: 662px;
+  top: 110px !important;
+  width: 310px;
+  height: 219px;
+	background-color: transparent !important;
+  -webkit-box-shadow: 0px 0px 15px -4px rgba(0,0,0,.2);
+	text-align: center !important;
+  padding-top: 20px !important;
+  font-size: 18px !important;
+	/*transition: all .4s ease-in-out;*/
+	color: #333 !important;
+}
+
+/* Scrollbar verstecken*/
+
+::-webkit-scrollbar{
+    width: 0px;
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb{
+    background: #FFF;
+}
+
+.nested-tabs-sensoren{
+    overflow: scroll;
+}
+
+ul.scroll {
+    display: block;
+    width: 1335px;
+}
+
+/* Inhalt*/
+
+.z-tabs.underlined.horizontal > .z-container > .z-content > .z-content-inner{
+  position: fixed !important;
+	background-color: #fff;
+	z-index: 1;
+}
+
+.z-content img{
+  width: 980px;
+  height: auto;
+}
+
+
+/* Sensoren Hauptnavi */
+#sensoren-hauptnavi {
+	position: fixed;
+	top: 75px;
+  margin: 0 auto;
+  /* left: 32%; */
+  width: 460px;
+  left: 52%;
+  margin-left: -208px;
+	transition: all .6s ease-in-out;
+	z-index: 9;
+}
+
+#sensoren-hauptnavi li {
+    display: inline;
+    font-size: 10px;
+    text-transform: uppercase;
+		margin: 1px !important;
+}
+
+#sensoren-hauptnavi.ui-state-default a, .ui-state-default a:link{
+	background-color: #e5e9ed;
+	color: #828282;
+}
+
+.ui-tabs .ui-tabs-nav li.ui-tabs-active .ui-tabs-anchor{
+	background-color: #7f9bbd;
+	color: #FFF;
+	pointer-events: none;
+}
+
+.ui-tabs .ui-tabs-nav li.ui-tabs-active .ui-tabs-anchor a{
+	pointer-events: none;
+}
+
+#sensoren-hauptnavi li a:nth-child(2){
+	background-color: #fff;
+	border-top-left-radius: 4px;
+	border-bottom-left-radius: 4px;
+}
+
+li .ui-tabs-active{
+	background-color: yellow !important;
+}
+
+li.ui-tabs-active a {
+	pointer-events: none !important;
+}
+
+#sensoren-hauptnavi li:first-child{
+	position: fixed;
+	left: 20px;
+	top: 369px;
+	z-index: 9;
+	border-radius: 4px;
+}
+
+#sensoren-hauptnavi li:first-child a {
+    padding: 13px 14px;
+		background-image: url('../img/back-arrow.png') !important;
+		background-size: 6px 10px;
+		background-repeat: no-repeat;
+		background-position: center center;
+}
+
+.components{
+	margin-left: 40px !important;
+}
+
+#sensoren-hauptnavi li::last-child{
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+
+/* Sensoren Punkte */
+
+.case-2d{
+  width: 65px;
+  height: 65px;
+  background-image: url("../img/dots.png");
+  pointer-events: auto;
+  background-size: contain;
+	background-repeat: no-repeat;
+	-webkit-transition: all 1.5s ease-in-out !important;
+	-webkit-transform: translate3d(0,0,0) !important;
+	transform: translate3d(0,0,0) !important;
+}
+
+li.z-active a span.case-2d {
+  background-image: url("../img/dots-active.png");
+
+}
+
+.zahl{
+	margin-right: 5px;
+}
+
+.z-tabs.underlined.red > ul.z-tabs-nav > li.z-active > a .zahl{
+	color: #fff;
+}
+
+.sensor-1{
+  position: fixed;
+  top: 120px;
+  left: 210px;
+  pointer-events: auto;
+}
+
+span.case-2d{
+	text-align: center;
+  line-height: 68px;
+  font-weight: 600;
+  font-size: 12px;
+	color: rgba(0,0,0,.5) !important;
+}
+
+#sensor-2 img{
+	display: none;
+	position: fixed;
+	width: 130px;
+	height: auto;
+	left: 365px;
+	top: 130px;
+}
+
+a#sensor-2 img.zoomImage.new-position {
+	left: 465px;
+	top: 130px;
+}
+
+.component-image{
+	transition: all 3s ease-in-out;
+}
+
+.component-image img{
+	display: none;
+}
+
+li.z-tab.z-active.component-zoom img{
+	display: inline;
+}
+
+#sensor-2-image{
+	position: fixed;
+	top: 140px;
+	left: 390px;
+	width: 100px;
+	height: auto;
+}
+
+.sensor-2{
+  position: fixed;
+  top: 150px;
+  left: 310px;
+  pointer-events: auto;
+}
+
+.sensor-3{
+  position: fixed;
+  top: 180px;
+  left: 260px;
+  pointer-events: auto;
+}
+
+.sensor-4{
+  position: fixed;
+  top: 100px;
+  left: 280px;
+  pointer-events: auto;
+}
+
+.sensor-5{
+  position: fixed;
+  top: 100px;
+  left: 180px;
+  pointer-events: auto;
+}
+
+
+/* Navigation zwischen Upstream / Compounding / Downstream */
+
+/* Compounding */
+
+.compounding-arrow{
+	position: fixed;
+	right: 10px !important;
+	top: 190px;
+	width: 40px;
+	height: 40px;
+	padding: 10px;
+	pointer-events: auto;
+}
+
+.compounding-arrow::before{
+	content: url("../img/anlage-arrow.png");
+	width: 10px;
+	height: auto;
+	position: absolute;
+	right: 15px;
+}
+
+/* Upstream */
+
+.upstream-arrow{
+	position: fixed;
+	right: 0px;
+	top: 190px;
+	width: 40px;
+	height: 40px;
+	padding: 10px;
+	pointer-events: auto;
+}
+
+.upstream-arrow::before{
+	content: url("../img/anlage-arrow-back.png");
+	width: 10px;
+	height: auto;
+	position: absolute;
+	left: 15px;
+}
+
+
+/* Downstream */
+
+.downstream-arrow{
+	position: fixed;
+	right: 10px !important;
+	top: 190px;
+	width: 40px;
+	height: 40px;
+	padding: 10px;
+	pointer-events: auto;
+}
+
+.downstream-arrow::before{
+	content: url("../img/anlage-arrow.png");
+	width: 10px;
+	height: auto;
+	position: absolute;
+	right: 15px;
+}
+
+.left{
+	left: 0px;
+}
+
+/* Sonderfall bei Downstream. Arrow zurück muss anders sein*/
+.newPos::before {
+  content: url("../img/anlage-arrow-back.png");
+  width: 10px;
+  height: auto;
+  position: fixed;
+  left: 15px;
+  top: 200px;
+}
+
+/* Navigation */
+
+.change-app {
+	position: relative;
+	width: 350px;
+	margin: 0 auto;
+	top: 10px;
+	padding: 10px;
+	background: #fff;
+	cursor: pointer;
+	outline: none;
+	font-weight: 400;
+	color: #333;
+	text-align: center;
+	font-size: 18px;
+}
+
+.change-app ul{
+	background-color: rgba(142,174,212,.1) !important;
+
+	height: 100%;
+}
+
+.change-app:after {
+  content: url(../img/arrow-down.jpg);
+  width: 0;
+  height: 0;
+  position: absolute;
+  right: 15px;
+  top: 43%;
+  margin-top: -6px;
+}
+
+.change-app.active:after {
+  content: url(../img/arrow-up.jpg);
+  width: 0;
+  height: 0;
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  margin-top: -6px;
+}
+
+.change-app .dropdown {
+  position: absolute;
+  top: 61px;
+  left: 0;
+  right: 0;
+  background: white;
+  border-radius: inherit;
+  font-weight: normal;
+  transition: all 0.5s ease-in;
+  list-style: none;
+  opacity: 0;
+
+  width: 100%;
+  left: 0px;
+  position: fixed;
+}
+
+.change-app .dropdown li a {
+	display: block;
+	padding: 20px;
+	text-decoration: none;
+	color: #333;
+	transition: all 0.3s ease-out;
+	text-align: left;
+	padding-left: 250px;
+	background-color: #fff;
+	margin-bottom: 1px;
+	font-size: 16px;
+}
+
+.change-app .dropdown li.give a::after{
+	content: url(../img/arrow-active.jpg);
+	float: right;
+	padding-right: 250px;
+}
+
+#dd li.give {
+    pointer-events: none;
+}
+
+#dd span:before {
+    content: 'Monitoring ';
+    font-weight: 600;
+}
+
+.change-app .dropdown li i {
+    float: right;
+    color: inherit;
+}
+
+.change-app .dropdown li:hover a {
+
+}
+
+
+.change-app.active .dropdown {
+	opacity: 1;
+
+	z-index: 999;
+
+}
+
+/* Navigation Switch */
+
+#navigation-switch{
+  position: absolute;
+  left: 310px;
+  top: -50px;
+  z-index: 999;
+	width: 400px;
+}
+
+#navigation-switch a.z-link{
+  font-size: 19px !important;
+  font-weight: 500;
+}
+
+
+#navigation-switch li{
+  display: none;
+  width: 100%;
+  text-align: center;
+}
+
+
+#navigation-switch li.z-active{
+  display: block;
+}
+
+/* Header Bereich */
+
+a#sensor-2 .3d-ansicht .anlagen-bild{
+ transform: translate(200px, -30px) scale(5);
+}
+
+#sensor-2 img .anlagen-bild{
+	opacity: 0;
+}
+
+.sensoren-titel{
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.sensoren-titel-in{
+	position: fixed;
+	top: 80px;
+	left: 20px;
+	font-size: 16px;
+}
+
+.blue{
+  color: #7c9cbb;
+}
+
+.number{
+	margin-right: 5px;
+}
+
+.ui-tabs-active .number {
+	color: #fff;
+}
+
+/* Maskierung der Ansicht bei Upstream, Comounding und Downsream */
+
+.border-sensoren{
+  background-color: #FFF;
+  opacity: .9;
+  display: none;
+  position: absolute;
+  width: 270px;
+  height: 290px;
+  z-index: 1;
+  margin-top: -60px;
+  left: 0px;
+}
+
+#header{
+  background-color: #fff;
+	z-index: 9999;
+}
+
+
+
+.blur{
+	-webkit-filter: blur(5px);
+	transition: all 1s ease-in-out;
+}
+
+
+.hiddenEvents {
+	position: absolute;
+	margin: 10px 20px;
+}
+
+.hiddenEvents > div {
+	position: absolute;
+	width: 50%;
+	height:100%;
+	top:0;
+}
+
+.hiddenEvents .hiddenError {
+	left:0;
+}
+
+.hiddenEvents .hiddenMaintenance {
+	right:0;
+}
+
+.hiddenEventPopups > div > div {
+	display: none;
+}
+
+.hiddenEventPopups > div > div.active {
+	display: block;
+}
+
+.hiddenEventPopups .hiddenMaintenance > div {
+	background:#313232;
+	z-index: 9999;
+	color:#ffffff;
+	width:500px;
+	font-size: 18px;
+	padding:25px 50px 0;
+	border-radius: 4px;
+	position: fixed;
+	top:50%;
+	margin-top:-150px;
+	left:50%;
+	margin-left: -300px;
+
+	box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+
+}
+
+.hiddenEventPopups div > div p {
+	margin-bottom: 25px;
+}
+
+.hiddenEventPopups div > div .buttons {
+	padding-bottom: 35px;
+}
+
+.hiddenEventPopups div > div .buttons > div.btn {
+		line-height: 48px;
+		/* border:1px solid #6f7070; */
+		display: inline-block;
+		padding:0px 25px;
+		border-radius: 4px;
+		-webkit-tap-highlight-color: rgba(0,0,0,0);
+		-webkit-appearance: none;
+		user-select:none;
+		outline:none;
+		cursor: pointer;
+		background-color: #7c9cbb;
+		color: #fff;
+}
+
+.hiddenEventPopups div > div .buttons > div.btn:hover,
+.hiddenEventPopups div > div .buttons > div.btn:active {
+	/* background: #6f7070; */
+}
+
+.hiddenEventPopups div > div .buttons > div.btn:first-of-type {
+	float: left;
+}
+
+.hiddenEventPopups div > div .buttons > div.btn:nth-child(2) {
+	float: right;
+}
+
+.hiddenEventPopups .hiddenMaintenance-Message {
+	border-top:9px solid #d3b736;
+}
+
+.hiddenEventPopups .hiddenMaintenance-Response .text {
+	padding-top: 25px;
+	padding-bottom: 25px;
+}
+
+.hiddenEventPopups .hiddenMaintenance-Response {
+	margin-top: -90px;
+}
+
+
+.hiddenEventPopups .hiddenError > div {
+	position: fixed;
+	z-index: 99999;
+	top:60px;
+	left:0;
+	bottom:0;
+	right:0;
+	background:#333333;
+	padding:50px 0;
+	color:#fff;
+}
+
+.hiddenErrorHeader {
+	height: 32vh;
+	font-size: 18px;
+	margin-left: -25px
+	margin-right:-25px;
+	margin-top: -50px;
+	padding:50px 25px 0px;
+	margin-bottom:25px;
+	background-position: bottom center;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+.hiddenEventPopups .hiddenError > div .text {
+	padding-top: 75px;
+	text-align: center;
+	max-width: 100%;
+	width:800px;
+	margin-left:auto;
+	margin-right:auto;
+	font-size: 24px;
+}
+
+.hiddenEventPopups .hiddenError > div .text .strong {
+	font-weight: 700;
+}
+
+.hiddenEventPopups .hiddenError-Message .text {
+	text-align: left !important;
+}
+
+.hiddenErrorHeader span {
+	color:#7b9bba;
+}
+
+.hiddenEventPopups .hiddenError .loader {
+	height:10px;
+	background: #000;
+	position: relative;
+	z-index: 1;
+	width: 600px;
+	margin:75px auto 25px;
+	overflow: hidden;
+}
+
+.hiddenEventPopups .hiddenError .loader .knob {
+	height: 10px;
+	background: #fff;
+	position: absolute;
+	z-index: 2;
+	width: 100%;
+	-webkit-transform: translateX(-100%);
+	-moz-transform: translateX(-100%);
+	transform: translateX(-100%);
+	-webkit-transition: all 2s;
+	transition: all 2s;
+}
+
+.hiddenEventPopups .hiddenError .loader .knob.loaded {
+	-webkit-transform: translateX(0);
+	-moz-transform: translateX(0);
+	transform: translateX(0);
+}
+
+.hiddenEventPopups .hiddenError > div .buttons {
+	text-align: center;
+	max-width: 100%;
+	width:800px;
+	margin-left:auto;
+	margin-right:auto;
+	padding-top: 75px;
+}
+
+.hiddenEventPopups .hiddenError > div .buttons div {
+	float:none !important;
+	margin-left: 15px;
+	margin-right: 15px;
+}
+
+.clock {
+	position: absolute;
+	right: 84px;
+	top: 20px;
+	font-size: 18px;
+	color: #7c9cbb;
+}
+
+.mycoperion {
+	position: absolute;
+	top: 60px;
+	background-color: #fff;
+	height: calc(100% - 120px);
+	width: 100%;
+	display: none;
+	align-content: center;
+	align-items: center;
+	justify-content: center;
+	transition: all 0.3s ease;
+	z-index: 99;
+	opacity: 0;
+}
+
+.mycoperion.is-active {
+	display: flex;
+}
+
+.mycoperion.is-visible {
+	opacity: 1;
+}
+
+.mycoperion .login {
+	max-width: 405px;
+}
+
+.mycoperion .ui-btn {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	border: none;
+	padding: 0;
+	width: 45px;
+	height: 45px;
+	background-color: transparent !important;
+	background-image: url(../img/popup-close.svg);
+	background-size: 20px;
+	cursor: pointer;
+	background-repeat: no-repeat;
+	background-position: center;
+	/* box-shadow: none; */
+	overflow: hidden;
+	text-indent: -5000px;
+	border-radius: 50px !important;
+	-webkit-box-shadow: 0 0px 0px rgba(0, 0, 0, .15);
+}

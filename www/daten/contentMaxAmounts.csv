@@ -1,0 +1,41 @@
+ComponentId;ComponentTitle;Monitoring;Rohstoffverfolgung;Masse gefüllt (kg)
+0;Silo 1 (PP);0;1;25000
+1;Filter;1;0;
+2;Silo 2 (CaCO3);;1;40000
+3;ATI;1;0;
+4;ZXD;1;0;
+5;Big Bag (PE);0;1;750
+6;HFS;1;0;
+7;ZRD;1;0;
+8;Tagessilo 1 (PE);;1;250
+9;Dosierer 1 (PE) (K-ML-D5-BSP-135);1;1;63
+10;Tagessilo 2 (PP);;1;400
+11;Dosierer 2 (PP) (K2-ML-D5-S60);1;1;63
+12;Hopper;;1;1105
+13;Dosierer 3 (K-ML-D5-KT20);1;1;80
+14;Big Bag 2 (Glasfaser);;1;1500
+15;Dosierer 4 (Glasfaser) (K-ML-KV3-6D);1;1;150
+16;Tagessilo 3 (CaCO3);;1;800
+17;Dosierer 5 (CaCO3) (K2-ML-T60);1;1;125
+18;ZSK;1;0;
+19;ZSB;1;0;
+20;ZS_EG;1;0;
+21;Strand Suction Device;1;0;
+22;SP500;1;0;
+23;Screener;1;0;
+24;ZVB;1;0;
+25;BXC;1;0;
+26;WZK;1;0;
+27;FUS;1;0;
+28;Silo 3 (Rezeptur 1) ;0;1;30000
+29;Silo 4 (Rezeptur 1);0;1;30000
+30;IBP250;1;1;70000
+31;WET;1;0;
+32;Silo 5 (Rezeptur 2);0;1;35000
+33;Silo 6 (Rezeptur 2);0;1;35000
+34;Silo 7 (Rezeptur 3);0;1;25000
+35;Silo 8 (Rezeptur 3);0;1;25000
+36;Silo 9 (Rezeptur 4);0;1;40000
+37;Silo 10 (Rezeptur 4);0;1;40000
+38;Silo 11 (Rezeptur 5);0;1;27500
+39;Silo 12 (Rezeptur 5);0;1;27500

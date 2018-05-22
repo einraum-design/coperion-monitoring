@@ -1,0 +1,143 @@
+[ {
+	"id": "optimisation-01",
+	"date": "2018-04-26 07:55:16",
+	"type": "optimisation",
+	"title": "Bridging",
+	"description": "<b>Registry Entry</b><br/>Conveying pressure low<br/><br/><b>Suspicion</b><br/>Bridging in Silo 2<br/><br/><b>Solution</b><br/>Silofluidisation (Pulsator) in ATI activated",
+	"image": "img/timeline/events/01_bridging_diagramm.png",
+	"image_big": "img/timeline/events/01_bridging_zeichnung.png"
+}, {
+	"id": "optimisation-02",
+	"date": "2018-05-01 18:14:30",
+	"type": "optimisation",
+	"title": "Leakage in Conveying System / Wear in Rotary Valve",
+	"description": "<b>Registry Entry</b><br/>Conveying pressure constantly increasing for 5 hours<br/><br/><b>Suspicion</b><br/>Leakage in Conveying System / Wear in Rotary Valve<br/><br/><b>Solution</b><br/>Performance is increased",
+	"image": "img/timeline/events/02_leakage_01_diagramm.png",
+	"image_big": "img/timeline/events/02_leakage_01_zeichnung.png"
+}, {
+	"id": "optimisation-03",
+	"date": "2018-05-04 12:27:30",
+	"type": "optimisation",
+	"title": "Uncontrolled Material Flow",
+	"description": "<b>Registry Entry</b><br/>Synced peaks of torque (Extruder) and refilling (Feeder) every 150 seconds<br/><br/><b>Suspicion</b><br/>Uncontrolled material flow in volumetric mode<br/><br/><b>Solution</b><br/>Extruder increases low-level, to avoid <i>Durchschie&szlig;en</i>",
+	"image": "img/timeline/events/03_uncontrolled_flow_diagramm.png",
+	"image_big": "img/timeline/events/03_uncontrolled_flow_zeichnung.png"
+}, {
+	"id": "optimisation-04",
+	"date": "2018-05-07 15:23:32",
+	"type": "optimisation",
+	"title": "Leakage in Conveying System / Wear in Rotary Valve",
+	"description": "<b>Registry Entry</b><br/>Conveying pressure constantly increasing for 5 hours<br/><br/><b>Suspicion</b><br/>Leakage in Conveying System / Wear in Rotary Valve<br/><br/><b>Solution</b><br/>Performance is increased",
+	"image": "img/timeline/events/04_leakage_02_diagramm.png",
+	"image_big": "img/timeline/events/04_leakage_02_zeichnung.png"
+}, {
+	"id": "optimisation-06",
+	"date": "2018-05-08 14:14:30",
+	"type": "optimisation",
+	"title": "Leakage in Conveying System / Wear in Rotary Valve",
+	"description": "<b>Registry Entry</b><br/>Conveying pressure constantly increasing for 5 hours<br/><br/><b>Suspicion</b><br/>Leakage in Conveying System / Wear in Rotary Valve<br/><br/><b>Solution</b><br/>Performance is increased",
+	"image": "img/timeline/events/02_leakage_01_diagramm.png",
+	"image_big": "img/timeline/events/02_leakage_01_zeichnung.png"
+}, {
+	"id": "warning-01",
+	"date": "2018-05-02 08:49:23",
+	"type": "warning",
+	"title": "Filterbags have been replaced",
+	"description": "Filter differential pressure abnormal high value = 18 mbar.",
+	"image": "img/timeline/events/Warnung_2.filter_zu_hoch_druck.png"
+}, {
+	"id": "warning-02",
+	"date": "2018-05-10 10:11:20",
+	"type": "warning",
+	"title": "Conveying pressure low <= 200 mbar",
+	"description": "No / insufficient product feed in pressure conveying line of finished product handling.",
+	"image": "img/timeline/events/ProductHandling_zuwenig.png"
+}, {
+	"id": "warning-03",
+	"date": "2018-05-13 11:07:20",
+	"type": "warning",
+	"title": "Conveying pressure low = -250 mbar",
+	"description": "No / insufficient product feed in suction conveying line.",
+	"image": "img/timeline/events/Silo.png"
+}, {
+  "id": "warning-04",
+	"date": "2018-04-23 08:49:23",
+	"type": "warning",
+	"title": "Filterbags have been replaced",
+	"description": "Filter differential pressure abnormal high value = 18 mbar.",
+	"image": "img/timeline/events/Warnung_2.filter_zu_hoch_druck.png"
+}, {
+	"id": "maintenance-01",
+	"date": "2018-05-24 18:07:20",
+	"type": "maintenance",
+	"title": "Filterbags",
+	"description": "Filterbags have been replaced.",
+	"image": "img/timeline/events/Meldungen_1.Filtertaschen.png"
+}, {
+	"id": "maintenance-02",
+	"date": "2018-04-30 09:05:30",
+	"type": "maintenance",
+	"title": "ATI",
+	"description": "Fluidisation fabric in ATI has been replaced after 16.000 operating hours.",
+	"image": "img/timeline/events/Meldungen_3.Belueftungstuecher.png"
+}, {
+	"id": "maintenance-03",
+	"date": "2018-05-05 16:16:10",
+	"type": "maintenance",
+	"title": "ZXD - rotary valve",
+	"description": "Bearings and Sealings on ZXD-rotary valve have been replaced during Inspection after 8.000 operating hours",
+	"image": "img/timeline/events/Meldungen_4.LuDZXD.png"
+}, {
+	"id": "maintenance-04",
+	"date": "2018-05-14 08:19:10",
+	"type": "maintenance",
+	"title": "HFS - Elutriator Fans",
+	"description": "Bearings and Sealing on HFS-Elutriator Fans should be replaced after 8.000 operating hours.",
+	"image": "img/timeline/events/Meldungen_6.LuDZRD.png"
+}, {
+	"id": "maintenance-05",
+	"date": "2018-05-10 06:55:19",
+	"type": "maintenance",
+	"title": "ZVB - rotary valve",
+	"description": "Bearings and Sealings on ZVB-rotary valve should be replaced after 8.000 operating hours.",
+	"image": "img/timeline/events/Meldungen_7.LuDZVB.png"
+}, {
+	"id": "maintenance-06",
+	"date": "2018-05-15 06:18:13",
+	"type": "maintenance",
+	"title": "WZK diverter valve",
+	"description": "WZK diverter valve should be cleaned after 4.000 operating hours.",
+	"image": "img/timeline/events/Meldungen_8.WZK.png"
+}, {
+	"id": "error-red-01",
+	"date": "2018-04-28 12:56:10",
+	"type": "error",
+	"title": "Error #1285",
+	"popUpTitle": "Barrel #6 cannot be heated over 90°C!",
+	"description": "Barrel #6 // HEATING // In progress. <br />Result: Malfunctioning cooling valve. Error has been solved.",
+	"image": "img/timeline/events/Stoermeldung_1.barrel_small.png"
+}, {
+	"id": "error-red-06",
+	"date": "2018-05-02 14:56:10",
+	"type": "error",
+	"title": "Error #1285",
+	"popUpTitle": "Barrel #6 cannot be heated over 90°C!",
+	"description": "Barrel #6 // HEATING // In progress. <br />Result: Malfunctioning cooling valve. Error has been solved.",
+	"image": "img/timeline/events/Stoermeldung_1.barrel_small.png"
+}, {
+	"id": "error-red-04",
+	"date": "2018-05-06 09:21:42",
+	"type": "error",
+	"title": "Error #1874",
+	"popUpTitle": "Start up not possible due to faults.",
+	"description": "Start up not possible due to faults. <br />Result: hydraulic cylinder malfunction due to leakage. Start up has been interlocked by malfunctioning hydraulic cylinder. Spare part installed by Jim Smith.",
+	"image": "img/timeline/events/Stoermeldung_4.startup_small.png"
+}, {
+	"id": "error-red-05",
+	"date": "2018-05-11 16:40:31",
+	"type": "error",
+	"title": "Error #2065",
+	"popUpTitle": "Start up has been blocked by temperature controller … Start up not possible.",
+	"description": "Start up has been blocked by temperature controller … Start up not possible. <br />Result: Start up has been interlocked due to malfunction in temperature controller. Controller exchanged.",
+	"image": "img/timeline/events/Stoermeldung_5.temperaturecontroller_small.png"
+} ]

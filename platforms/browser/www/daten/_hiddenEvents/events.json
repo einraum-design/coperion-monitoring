@@ -1,0 +1,69 @@
+{
+  "errors": [
+    {
+        "title": "Error <span# 0158</span>",
+        "eventTitle": "Error # 187",
+        "image": "daten/_hiddenEvents/errors/error.jpg",
+        "error": "<p><span class='strong'>Barrel 6</span> cannot be heated over 90°C!</p>",
+        "eventError": "Barrel 6 cannot be heated over 90°C!",
+        "intern": "<p>Connection to Coperion <span>ServiceBox is being established. Information will be forwarded to Coperion.</p>",
+        "coperion": "<p>Connection to Maintenance team is being established. Information will be forwarded.</p>",
+         "response_intern": "<p>Coperion will contact you.</p>",
+        "response_coperion": "<p>Coperion will contact you.</p>",
+        "eventImage": "../img/events/2016-09-27-event.png"
+    },
+    {
+        "title": "Error <span># 0158</span>",
+        "eventTitle": "Error # 188",
+        "image": "daten/_hiddenEvents/errors/error.jpg",
+        "error": "<p><span class='strong'>Barrel 6</span> cannot be heated over 90°C!</p>",
+        "eventError": "Barrel 6 cannot be heated over 90°C!",
+        "intern": "<p>Connection to Coperion <span>ServiceBox is being established. Information will be forwarded to Coperion.</p>",
+        "coperion": "<p>Connection to Maintenance team is being established. Information will be forwarded.</p>",
+        "response_intern": "<p>Coperion will contact you.</p>",
+        "response_coperion": "<p>Coperion will contact you.</p>",
+        "eventImage": "../img/events/2016-09-27-event.png"
+    },
+    {
+        "title": "Error <span># 0158</span>",
+        "eventTitle": "Error # 189",
+        "image": "daten/_hiddenEvents/errors/error.jpg",
+        "error": "<p><span class='strong'>Barrel 6</span> cannot be heated over 90°C!</p>",
+        "eventError": "Barrel 6 cannot be heated over 90°C!",
+        "intern": "<p>Connection to Coperion <span>ServiceBox is being established. Information will be forwarded to Coperion.</p>",
+        "coperion": "<p>Connection to Maintenance team is being established. Information will be forwarded.</p>",
+        "response_intern": "<p>Coperion will contact you.</p>",
+        "response_coperion": "<p>Coperion will contact you.</p>",
+        "eventImage": "../img/events/2016-09-27-event.png"
+    }
+
+  ],
+
+  "maintenance": [
+    {
+        "eventTitle": "Komponente: 1",
+        "eventDescription": "Die Getriebequalität ist in ca. 4 Wochen erreicht. Ein Termin für einen Wechsel des Getriebeöls wurde für den 14.10.2016 um 09.30 Uhr festgelegt.",
+        "eventDate": "2016-10-04 09:30:00",
+        "alertText": "<p>Komponente: 3</p><p>Die Getriebeölqualität ist in ca. 4 Wochen erreicht.<br />Getriebeöl sollte gewechselt werden.</p><p>Wollen Sie einen Termin vereinbaren?</p>",
+        "alertResponse": "<p>Der Termin wurde für den 14.10.2016 um 09.30 Uhr festgelegt!<br />Der Techniker Herr Karl Schmidt ist informiert!</p>",
+        "eventImage": "../img/events/placeholder.jpg"
+    },
+    {
+        "eventTitle": "Komponente: 1",
+        "eventDescription": "Die Getriebequalität ist in ca. 4 Wochen erreicht. Ein Termin für einen Wechsel des Getriebeöls wurde für den 14.10.2016 um 09.30 Uhr festgelegt.",
+        "eventDate": "2016-10-04 09:30:00",
+        "alertText": "<p>Komponente: 2</p><p>Die Getriebeölqualität ist in ca. 4 Wochen erreicht.<br />Getriebeöl sollte gewechselt werden.</p><p>Wollen Sie einen Termin vereinbaren?</p>",
+        "alertResponse": "<p>Der Termin wurde für den 14.10.2016 um 09.30 Uhr festgelegt!<br />Der Techniker Herr Karl Schmidt ist informiert!</p>",
+        "eventImage": "../img/events/placeholder.jpg"
+    },
+    {
+        "eventTitle": "Testtitel 1",
+        "eventDescription": "Die Getriebequalität ist in ca. 4 Wochen erreicht. Ein Termin für einen Wechsel des Getriebeöls wurde für den 14.10.2016 um 09.30 Uhr festgelegt.",
+        "eventDate": "2016-10-04 09:30:00",
+        "alertText": "<p>Komponente: 1</p><p>Die Getriebeölqualität ist in ca. 4 Wochen erreicht.<br />Getriebeöl sollte gewechselt werden.</p><p>Wollen Sie einen Termin vereinbaren?</p>",
+        "alertResponse": "<p>Der Termin wurde für den 14.10.2016 um 09.30 Uhr festgelegt!<br />Der Techniker Herr Karl Schmidt ist informiert!</p>",
+        "eventImage": "../img/events/placeholder.jpg"
+    }
+  ]
+
+}
